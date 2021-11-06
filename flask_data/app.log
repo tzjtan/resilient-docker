@@ -1,0 +1,16 @@
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.19.0.3:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.19.0.2:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.19.0.3:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:Visit count 1 belongs to 172.19.0.1
+INFO:werkzeug:172.19.0.1 - - [06/Nov/2021 12:59:45] "GET / HTTP/1.1" 200 -
+DEBUG:root:Visit count 2 belongs to 172.19.0.1
+INFO:werkzeug:172.19.0.1 - - [06/Nov/2021 12:59:47] "GET / HTTP/1.1" 200 -

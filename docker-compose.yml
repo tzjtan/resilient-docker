@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+  # This is any app which needs to be periodically backed up.
+  flask:
+    build: ./flask_data
+    restart: always
+    environment:
+      FLASK_ENV: development
+    ports:
+      - 5000:5000
+    volumes:
+      - ./example_file_to_backup.txt:/app/example_file_to_backup.txt
+      - ./flask_data:/app/data
+
+
+  # Flexible daemon that backups everything in /watch
+  # Configure its backup freq and retention policy in \backup_daemon\entrypoint_with_cronjobs.sh
+  backup-daemon:
+    build: ./backup_daemon
+    restart: always
+    volumes:
+      - ./example_file_to_backup.txt:/watch/example_file_to_backup.txt
+      - ./flask_data:/watch/flask_data
+      - ./backup_daemon:/app
